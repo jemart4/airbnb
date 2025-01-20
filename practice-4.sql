@@ -4,4 +4,10 @@
 -- | 272      |
 -- +----------+
 
+.mode columns 
+.headers on
 
+SELECT COUNT (*)
+FROM listings 
+WHERE neighborhood = "Lincoln Park"
+;
