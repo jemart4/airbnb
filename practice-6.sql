@@ -19,8 +19,8 @@
 .headers on
 
 
-SELECT listings.neighborhood, COUNT (*) FROM listings
-INNER JOIN reviews ON listings.id = reviews.listing_id
+SELECT listings.neighborhood, COUNT (*) FROM reviews
+--INNER JOIN reviews ON listings.id = reviews.listing_id
+INNER JOIN listings ON reviews.listing_id = listings.id
 GROUP BY listings.neighborhood 
-
 ;
